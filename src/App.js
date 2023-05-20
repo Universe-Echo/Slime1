@@ -5,6 +5,8 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthContext } from './context/AuthContext';
+import Forgot_Password from './pages/Forgot_Password';
+import Forgot_Password_Login from './pages/Forgot_Password_Login';
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
           } />
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
+          <Route path='forgot' element={<Forgot_Password />} />
+          <Route path='forgot_login' element={<Forgot_Password_Login />} />
         </Route>
       </Routes>
     </BrowserRouter>

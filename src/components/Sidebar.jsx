@@ -6,9 +6,9 @@ import Chats from '../components/Chats'
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <Navbar/>
-      <Search/>
-      <Chats/>
+      <Navbar />
+      <Search />
+      <Chats />
     </div>
   )
 }

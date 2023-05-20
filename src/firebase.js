@@ -5,12 +5,12 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCVh6INyjNJDkscgBYNW6DXjHjgmdkj2d4",
-    authDomain: "slime-echo12.firebaseapp.com",
-    projectId: "slime-echo12",
-    storageBucket: "slime-echo12.appspot.com",
-    messagingSenderId: "842544945695",
-    appId: "1:842544945695:web:79b75d42724c97bcced32a",
-    measurementId: "G-TEEQGZCVTJ"
+  authDomain: "slime-echo12.firebaseapp.com",
+  projectId: "slime-echo12",
+  storageBucket: "slime-echo12.appspot.com",
+  messagingSenderId: "842544945695",
+  appId: "1:842544945695:web:79b75d42724c97bcced32a",
+  measurementId: "G-TEEQGZCVTJ"
 };
 
 export const app = initializeApp(firebaseConfig);

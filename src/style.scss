@@ -55,9 +55,14 @@
          flex-direction: column;
          gap: 20px;
          width: 35vh;
-         
+
+         .sl_img {
+            padding: 10px;
+            border: 2px rgb(173, 179, 236) solid;
+         }
+
          span {
-            margin-left: 50px;
+            text-align: center;
          }
 
 
@@ -164,8 +169,8 @@
 
                img {
                   background-color: rgb(255, 255, 255);
-                  height: 24px;
-                  width: 24px;
+                  height: 28px;
+                  width: 28px;
                   border-radius: 50%;
                   object-fit: cover;
                }
@@ -242,6 +247,7 @@
                p {
                   font-size: 14px;
                   color: lightgray;
+                  margin: 2px;
                }
             }
          }
@@ -255,13 +261,27 @@
             background-color: #333333;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: left;
             padding: 10px;
             color: white;
+
+span {
+   font-weight: 600;
+   letter-spacing: 1px;
+}
+            img {
+               background-color: rgb(255, 255, 255);
+               height: 28px;
+               width: 28px;
+               border-radius: 50%;
+               object-fit: cover;
+               margin-right: 10px;
+            }
          }
 
 
          .messages {
+            padding: 8px;
             background-color: #2b2a2a;
             color: white;
             height: calc(100% - 140px);
@@ -372,6 +392,7 @@
                   height: 28px;
                   width: 28px;
                   cursor: pointer;
+                  margin-right: 5px;
                }
 
                button {
