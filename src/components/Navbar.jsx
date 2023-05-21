@@ -11,7 +11,7 @@ const Navbar = () => {
  
   return (
     <div className='navbar'>
-      {/* <span className="logo">Slime</span> */}
+      <span className="logo">Slime</span>
       <div className="user">
         <img src={currentUser.photoURL ? currentUser.photoURL : 'https://avatarfiles.alphacoders.com/211/thumb-211248.jpg'} alt=""/>
         
