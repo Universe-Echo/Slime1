@@ -27,6 +27,7 @@ const Messages = () => {
 
   return (
     <div className='messages'>
+      <div className='topMessage'><span>Your chat with {data.user.displayName} begins here</span></div>
       {messages.map( (m) => (
         
         <Message message={m} key={m.id}/>

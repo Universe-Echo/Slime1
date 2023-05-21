@@ -53,8 +53,8 @@ const Login = () => {
         <span className="title">Login</span>
 
         <form onSubmit={handleSubmit}>
-          <input type="email" placeholder='Email' />
-          <input type="password" placeholder='Password' />
+          <input type="email" placeholder='Email' required/>
+          <input type="password" placeholder='Password' required/>
           <button>Login</button>
           {err && <span>{err1}</span>}
         </form>

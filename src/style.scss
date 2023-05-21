@@ -56,9 +56,13 @@
          gap: 20px;
          width: 35vh;
 
+
          .sl_img {
             padding: 10px;
             border: 2px rgb(173, 179, 236) solid;
+            height: 80px;
+            width: 80px;
+
          }
 
          span {
@@ -110,13 +114,17 @@
    }
 }
 
+
+
+
 .home {
-   background-color: #6d6d6d;
+   background-color: #2b2a2a;
    height: 100vh;
    display: flex;
    align-items: center;
    justify-content: center;
    overflow: hidden;
+
 
 
    .container {
@@ -126,6 +134,7 @@
       overflow: hidden;
       border: none;
       outline: none;
+
 
       @include mobile {
          width: 100%;
@@ -142,17 +151,24 @@
          background-color: #2b2a2a;
          border-right: 1px #6e6464 solid;
 
+
          .navbar {
             background-color: #333333;
             display: flex;
             align-items: center;
             height: 50px;
             padding: 10px;
-            justify-content: space-between;
+            // justify-content: space-between;
             color: white;
+            
 
             .logo {
                font-weight: bold;
+               letter-spacing: 1px;
+
+               &:hover {
+                  color: cyan;
+               }
 
                @include mobile {
                   display: none;
@@ -162,10 +178,15 @@
                   display: none;
                }
             }
-
+            
             .user {
                display: flex;
                gap: 10px;
+span {
+   font-weight: 500;
+   letter-spacing: 1px;
+}
+
 
                img {
                   background-color: rgb(255, 255, 255);
@@ -173,6 +194,11 @@
                   width: 28px;
                   border-radius: 50%;
                   object-fit: cover;
+
+                  &:hover {
+                     background: rgb(0, 0, 0);
+                     box-shadow: 0 0 32px rgb(0, 0, 0);
+                  }
                }
 
                button {
@@ -265,10 +291,11 @@
             padding: 10px;
             color: white;
 
-span {
-   font-weight: 600;
-   letter-spacing: 1px;
-}
+            span {
+               font-weight: 600;
+               letter-spacing: 1px;
+            }
+
             img {
                background-color: rgb(255, 255, 255);
                height: 28px;
@@ -287,6 +314,19 @@ span {
             height: calc(100% - 140px);
             overflow: auto;
 
+            .topMessage {
+               margin-top: 20px;
+               text-align: center;
+
+               span {
+                  padding: 8px;
+                  border: #3a3939 solid 2px;
+                  background-color: #3a3939;
+                  border-radius: 20px;
+                  cursor: pointer;
+                  font-weight: 450;
+               }
+            }
 
             &::-webkit-scrollbar {
                width: 5px;
@@ -307,8 +347,9 @@ span {
 
             .message {
                display: flex;
-               gap: 20px;
+               gap: 15px;
                margin-bottom: 20px;
+            
 
                .messageInfo {
                   display: flex;
@@ -332,10 +373,17 @@ span {
                   flex-direction: column;
                   gap: 10px;
 
+
                   p {
                      background-color: rgb(69, 89, 145);
                      padding: 10px 20PX;
                      border-radius: 0px 10px 10px 10px;
+
+                     span {
+                        color: gray;
+                        font-size: 10px;
+
+                     }
                   }
 
                   img {
@@ -355,6 +403,7 @@ span {
                         color: white;
                         border-radius: 10px 0px 10px 10px;
                         max-width: max-content;
+                   
                      }
                   }
                }
@@ -362,13 +411,17 @@ span {
          }
 
          .input {
-            height: 50px;
+            height: 40px;
             background-color: #575757;
             color: white;
-            padding: 10px;
+            padding: 2px;
+            padding-left: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-radius: 20px;
+            margin: 5px;
+            
 
             input {
                outline: none;
@@ -377,6 +430,7 @@ span {
                color: rgb(255, 255, 255);
                font-size: 18px;
                background-color: transparent;
+               
 
                &::placeholder {
                   color: lightgray;
@@ -400,9 +454,14 @@ span {
                   padding: 10px 15px;
                   color: white;
                   background-color: rgb(255, 115, 115);
+                  border-radius: 20px;
+                  margin-right: 4px;
                }
             }
          }
+         
       }
    }
 }
+
+

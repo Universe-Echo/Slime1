@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import Add from '../img/avatarpng.png'
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, storage, db } from '../firebase'
@@ -6,6 +6,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+
 
 
 const Register = () => {
@@ -47,6 +48,7 @@ const onSelectFile = e => {
     const password = e.target[2].value;
     const file = e.target[3].files[0]
 
+    const displayName1 = displayName.toLowerCase()
 
 
     try {
@@ -59,6 +61,7 @@ const onSelectFile = e => {
         await setDoc(doc(db, 'users', res.user.uid), {
           uid: res.user.uid,
           displayName,
+          displayName1,
           email,
           photoURL: 'https://avatarfiles.alphacoders.com/211/thumb-211248.jpg'
         })
@@ -98,6 +101,7 @@ const onSelectFile = e => {
             await setDoc(doc(db, 'users', res.user.uid), {
               uid: res.user.uid,
               displayName,
+              displayName1,
               email,
               photoURL: downloadURL
             })
@@ -153,9 +157,9 @@ setErr1('Email already registered!')
         <span className="title">Sign up</span>
 
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder='Nickname' />
-          <input type="email" placeholder='Email' />
-          <input type="password" placeholder='Password' />
+          <input type="text" placeholder='Nickname' required />
+          <input type="email" placeholder='Email' required/>
+          <input type="password" placeholder='Password' required/>
           <input type="file" placeholder='Avatar' id='file' style={{ display: 'none' }} onChange={onSelectFile} />
           {selectedFile &&  <img src={preview} className='sl_img' /> }
           <label htmlFor="file"> <img src={Add} alt="" /> <span>Add profile pic</span> </label>

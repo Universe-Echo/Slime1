@@ -10,11 +10,12 @@ const Search = () => {
 
   const { currentUser } = useContext(AuthContext)
   const handleSearch = async () => {
-    const q = query(collection(db, 'users'), where('displayName', '==', username)
+    const q = query(collection(db, 'users'), where('displayName1', '==', username)
 
     );
 
     try {
+      
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
         setUser(doc.data())
@@ -70,7 +71,7 @@ const Search = () => {
   return (
     <div className='search'>
       <div className="searchForm">
-        <input type="text" placeholder='Find someone' onKeyDown={handleKey} onChange={e => setUsername(e.target.value)}
+        <input type="text" placeholder='Find someone' onKeyDown={handleKey} onChange={e => setUsername(e.target.value.toLowerCase())}
           value={username} />
       </div>
       {err && <span>oopsssss! no such user.</span>}

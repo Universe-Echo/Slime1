@@ -53,7 +53,7 @@ setErr(true)
         </span>
 
         <form onSubmit={handleSubmit}>
-          <input type="email" placeholder='Email' />
+          <input type="email" placeholder='Email' required/>
           <button>send verification email</button>
           {err && <span>Email not registered :(</span>}
         </form>
